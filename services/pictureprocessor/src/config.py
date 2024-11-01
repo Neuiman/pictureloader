@@ -11,5 +11,3 @@ class Settings:
     JWT_ALGORITHM = os.getenv("JWT_ALGORITHM")
     KAFKA_BOOTSTRAP_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS")
     PICTURE_TOPIC = os.getenv("PICTURE_TOPIC")
-
-print(Settings.KAFKA_BOOTSTRAP_SERVERS)
