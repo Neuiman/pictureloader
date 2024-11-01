@@ -1,16 +1,16 @@
 services:
-  db:
+  test_db:
     image: postgres:15
-    container_name: db
+    container_name: test_db
     command: -p 5432
     expose:
       - 5432
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
+      - POSTGRES_USER=test_postgres
+      - POSTGRES_PASSWORD=test_postgres
+      - POSTGRES_DB=test_postgres
     networks:
       - custom
 

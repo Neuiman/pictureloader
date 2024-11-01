@@ -17,7 +17,7 @@ class UserRepositoryProtocol(Protocol):
 
 
 class UserRepositoryImp:
-    async def add_user(self, data: dict) :
+    async def add_user(self, data: dict) -> UserSchema:
         async with session_maker() as session:
             stmt = insert(User).values(**data).returning(User)
             result = await session.execute(stmt)
